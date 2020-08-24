@@ -49,9 +49,10 @@ class _ContainerScreenState extends State<ContainerScreen> {
           print('screen tapped');
           setState(() {
             final randomNumber = Random();
-            _width = randomNumber.nextInt(300).toDouble();
-            _angle = _angle + 45.0;
-           _height = randomNumber.nextInt(300).toDouble();
+            _width = randomNumber.nextInt(500).toDouble();
+            _angleDirection = randomNumber.nextInt(10);
+            _angle = _angleDirection.isEven ? _angle + 45.0 : _angle - 45.0;
+           _height = randomNumber.nextInt(500).toDouble();
             _color = Color.fromRGBO(randomNumber.nextInt(300),
                 randomNumber.nextInt(300), randomNumber.nextInt(300), 1);
            // _borderRadius =
