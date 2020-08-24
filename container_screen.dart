@@ -50,12 +50,12 @@ class _ContainerScreenState extends State<ContainerScreen> {
           setState(() {
             final randomNumber = Random();
             _width = randomNumber.nextInt(300).toDouble();
-            _angle = 45.0;
+            _angle = _angle + 45.0;
            _height = randomNumber.nextInt(300).toDouble();
             _color = Color.fromRGBO(randomNumber.nextInt(300),
                 randomNumber.nextInt(300), randomNumber.nextInt(300), 1);
            // _borderRadius =
-                BorderRadius.circular(randomNumber.nextInt(300).toDouble());
+             //   BorderRadius.circular(randomNumber.nextInt(300).toDouble());
           });
         },
       ),
